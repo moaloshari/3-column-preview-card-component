@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+
+:root{
+    --gold500: 
+        hsl(31, 77%, 52%);
+    --cyan800: 
+        hsl(184, 100%, 22%);
+    --green950:
+        hsl(179, 100%, 13%);
+    --trans-wh-par:
+        hsla(0, 0%, 100%, 0.75);
+    --gray-bg-head-btn: 
+        hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--gray-bg-head-btn);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding:3rem 1.2rem ;
+}
+
+.container{
+    min-width: 17.18rem;
+    max-width:60rem ;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.flex-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-cont .card{
+    padding: 3.5rem 3.5rem 2.5rem;
+}
+
+.flex-cont h2{
+    color: var(--gray-bg-head-btn);
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-block: 1.8rem ;
+    font-size: 2.125rem;
+}
+
+.flex-cont p{
+    color: var(--trans-wh-par);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.8;
+}
+
+.flex-cont .card:first-child{
+    background: var(--gold500);
+    
+}
+
+.flex-cont .card:nth-child(2){
+    background: var(--cyan800);
+}
+
+.flex-cont .card:last-child{
+    background: var(--green950);
+}
+
+button{
+    margin-block-start: 1.2rem;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: 400;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.9375rem;
+    background: var(--gray-bg-head-btn);
+    mix-blend-mode: screen;
+    border: 1px solid var(--gray-bg-head-btn);
+}
+
+button:hover{
+    background: transparent;
+    border: 1px solid var(--gray-bg-head-btn);
+    color: var(--gray-bg-head-btn);
+}
+
+@media (min-width:48rem){
+    .flex-cont{
+        flex-direction: row;
+    }
+
+    button{
+        margin-block-start: 8rem;
+    }
+
+    .flex-cont .card{
+        padding-block-end: 3rem;
+    }
+}
+
